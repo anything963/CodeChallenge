@@ -1,0 +1,92 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-8 col-sm-10"><h1>Hour Tracker</h1></div>
+        <div class="col-xs-4 col-sm-2">
+            <button type="button" class="btn btn-lg btn-info btn-block btn-logout" ng-click="vm.logout()">Logout</button>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading panel-title">
+            Hour Tracker
+        </div>
+        <div class="panel-body panel-hour-tracker">
+            <form name="hourTrackerform" >
+                <p>Please enter this week's hours</p>
+                <span class="help-block"
+                      ng-show="vm.displayMaxHoursRuleError">
+                    Cannot enter more than 40 hours in a week.
+                </span>
+                <span class="help-block"
+                      ng-show="vm.displayWeekendRuleError">
+                    Cannot enter hours for Monday if hours are entered for Saturday and Sunday.
+                </span>
+                <span class="help-block"
+                      ng-show="vm.displayRangeError">
+                    Hours should be from 0-10.
+                </span>
+                <div class="form-group">
+                    <label for="txtSunday" class="col-sm-2 control-label">Sunday</label>
+                    <div class="col-sm-8">
+                        <input type="number" class="form-control" id="txtSunday" name="txtSunday"
+                               ng-model="vm.hours.sunday" placeholder="Enter hours"
+                               >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="txtSunday" class="col-sm-2 control-label">Monday</label>
+                    <div class="col-sm-8">
+                        <input type="number" class="form-control" id="txtMonday" name="txtMonday" ng-model="vm.hours.monday" placeholder="Enter hours"
+                               >
+                    </div>
+                </div>
+                <div class="form-group" >
+                    <label for="txtSunday" class="col-sm-2 control-label">Tuesday</label>
+                    <div class="col-sm-8">
+                        <input type="number" class="form-control" id="txtTuesday" name="txtTuesday" ng-model="vm.hours.tuesday" placeholder="Enter hours"
+                               >
+                    </div>
+                </div>
+                <div class="form-group" >
+                    <label for="txtSunday" class="col-sm-2 control-label">Wednesday</label>
+                    <div class="col-sm-8">
+                        <input type="number" class="form-control" id="txtWednesday" name="txtWednesday" ng-model="vm.hours.wednesday" placeholder="Enter hours"
+                               >
+                    </div>
+                </div>
+                <div class="form-group" >
+                    <label for="txtSunday" class="col-sm-2 control-label">Thursday</label>
+                    <div class="col-sm-8">
+                        <input type="number" class="form-control" id="txtThursday" name="txtThursday" ng-model="vm.hours.thursday" placeholder="Enter hours"
+                               >
+                    </div>
+                </div>
+                <div class="form-group" >
+                    <label for="txtSunday" class="col-sm-2 control-label">Friday</label>
+                    <div class="col-sm-8">
+                        <input type="number" class="form-control" id="txtFriday" name="txtFriday" ng-model="vm.hours.friday" placeholder="Enter hours"
+                               >
+                    </div>
+                </div>
+                <div class="form-group" >
+                    <label for="txtSunday" class="col-sm-2 control-label">Saturday</label>
+                    <div class="col-sm-8">
+                        <input type="number" class="form-control" id="txtSaturday" name="txtSunday" ng-model="vm.hours.saturday" placeholder="Enter hours"
+                               >
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <button class="btn btn-lg btn-primary btn-block btn-submit"
+                                type="submit"
+                                ng-click="vm.submit()">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+</div>

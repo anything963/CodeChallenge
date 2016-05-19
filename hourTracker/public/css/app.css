@@ -1,0 +1,69 @@
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #fff;
+}
+/************Login*****************/
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+.form-signin .checkbox {
+    font-weight: normal;
+}
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px 0;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-signin .help-block{
+    color: red;
+}
+
+/*******************Hour Tracker**********************/
+.panel-hour-tracker label {
+    margin: 10px 3px;
+}
+
+.panel-hour-tracker input {
+    width: 150px;
+    margin: 3px;
+}
+
+.panel-hour-tracker .help-block {
+    color:red;
+}
+
+.btn-logout {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.btn-submit {
+    width: 175px;
+    margin: 9px;
+}

@@ -1,0 +1,55 @@
+Project Setup:
+- The zip file has "database" folder and "hourtracker" folder.
+- database folder has the sql file. The sql file is for MySql database.
+- The hourtracker folder has Laravel + AngularJS project.
+- The hourtracker root folder is a laravel project which has angular frontend project in the public folder.
+	You will have to put this hourtracker folder in your localhost
+
+Database Setup:
+Users - This has the users information.
+Hours - This tracks the user's hours.
+Please modify the database.php file which is in config folder. 
+The "database", "username" and "password" value has to be changed to match your configuration.
+
+option 1) The database can be created by running the sql script from phpMyAdmin if WAMP is installed. 
+ -In the home screen > sql tab > paste the script and run.
+
+option 2) The database can also be created with Laravel migrate.
+-Run the following commands in command prompt from the root folder of the project.
+	i.e. From the hourtracker folder
+
+->php artisan migrate
+->php artisan db:seed
+	
+- This creates the database and inserts user details.
+
+Problems fixed:
+ - AngularJS is the front end and Laravel WebApi is the backend.
+ So access to the database is allowed only through the API.
+ 
+ - If the users have previously entered hours the hours will be loaded. 
+ Hour tracking for each week begins from Sunday. So a new row is generated for each week in the "Hours" table.
+ 
+ - The "T_ENCAPSED_AND_WHITESPACE" error in the program was caused due to syntax error in line 80.
+changing 
+	echo 'program is complete"; 
+to 
+	echo "program is complete"; 
+fixes the porblem
+
+Enhancements:
+a. Used AngularJS to create single page application.
+	- Used ui-router to create different view states.
+b. Used MySql database for backend.
+c. Used password encryption for security. Only hashed password is saved in the database.
+	- All user inputs are validated before entering into the database.
+	- Create HTTP response for errors.
+d. Used PHP MVC Laravel framework
+e. Used Eloquent ORM to interact with the database.
+f. Used laravel default file seession handling. Used remember me functionality to remember user.
+g. Implemented all the required business rules.
+	The validation for the business rules is done both at client using javascript and server.
+
+Used Bootstrap for front end styling.
+
+--Please let me know if you run into any problems while running the application.

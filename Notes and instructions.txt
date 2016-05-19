@@ -53,3 +53,4 @@ g. Implemented all the required business rules.
 Used Bootstrap for front end styling.
 
 --Please let me know if you run into any problems while running the application.
+--I realized that the path is case-sensitve during testing so please consider that while entering url in your browser.
